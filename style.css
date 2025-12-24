@@ -1,0 +1,308 @@
+/* Основные стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Подключаем шрифт */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #2a2a3e 100%);
+    color: #f0f0f0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Основной контейнер */
+.container {
+    background: #2a2a3e;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #3a3a4e;
+}
+
+/* Логотип и заголовок */
+.header {
+    margin-bottom: 40px;
+}
+
+.logo {
+    font-size: 42px;
+    font-weight: 700;
+    color: #b19cd9;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.tagline {
+    color: #a0a0b0;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Основной заголовок */
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.highlight {
+    color: #b19cd9;
+    position: relative;
+}
+
+.highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: rgba(177, 156, 217, 0.3);
+    z-index: -1;
+}
+
+.subtitle {
+    color: #c0c0d0;
+    margin-bottom: 40px;
+    font-size: 18px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Кнопка Telegram */
+.telegram-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #b19cd9 0%, #9b87c7 100%);
+    color: #1a1a2e;
+    padding: 18px 45px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    margin: 30px 0;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.telegram-btn:hover {
+    background: linear-gradient(135deg, #c2afeb 0%, #a897d3 100%);
+    transform: translateY(-2px);
+}
+
+.telegram-btn:active {
+    transform: scale(0.98);
+}
+
+.telegram-btn i {
+    font-size: 22px;
+}
+
+/* Особенности канала */
+.features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 50px 0;
+}
+
+.feature {
+    background: #3a3a4e;
+    padding: 25px;
+    border-radius: 12px;
+    min-width: 200px;
+    border: 1px solid #4a4a5e;
+    transition: all 0.3s ease;
+}
+
+.feature:hover {
+    border-color: #b19cd9;
+    transform: translateY(-5px);
+}
+
+.feature i {
+    color: #b19cd9;
+    font-size: 28px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.feature span {
+    font-weight: 600;
+    font-size: 17px;
+    color: #ffffff;
+}
+
+/* Предпросмотр Telegram */
+.telegram-preview {
+    background: #252536;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 40px 0;
+    border: 1px solid #3a3a4e;
+}
+
+.telegram-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #3a3a4e;
+}
+
+.telegram-header i {
+    font-size: 32px;
+    color: #0088cc;
+}
+
+.channel-name {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.channel-status {
+    font-size: 14px;
+    color: #4ade80;
+    margin-top: 5px;
+}
+
+.message {
+    background: #3a3a4e;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 20px 0;
+    border-left: 5px solid #b19cd9;
+    text-align: left;
+}
+
+.message.new {
+    background: #4a3a5e;
+    border-left-color: #ff6b9d;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.9; }
+    100% { opacity: 1; }
+}
+
+.message strong {
+    color: #b19cd9;
+    font-size: 16px;
+}
+
+.message p {
+    margin-top: 10px;
+    color: #e0e0f0;
+    line-height: 1.5;
+}
+
+.message-time {
+    font-size: 13px;
+    color: #a0a0b0;
+    text-align: right;
+    margin-top: 15px;
+}
+
+/* Футер */
+footer {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid #3a3a4e;
+    color: #a0a0b0;
+}
+
+.channel-link {
+    background: rgba(177, 156, 217, 0.1);
+    padding: 15px 30px;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 15px 0;
+    border: 1px solid rgba(177, 156, 217, 0.3);
+}
+
+.channel-link a {
+    color: #b19cd9;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.channel-link a:hover {
+    color: #c2afeb;
+}
+
+.copyright {
+    font-size: 14px;
+    margin-top: 20px;
+    color: #808090;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 20px;
+    }
+    
+    .logo {
+        font-size: 36px;
+    }
+    
+    h1 {
+        font-size: 28px;
+    }
+    
+    .telegram-btn {
+        padding: 16px 35px;
+        font-size: 16px;
+    }
+    
+    .features {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .feature {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+    
+    .subtitle {
+        font-size: 16px;
+    }
+    
+    .telegram-btn {
+        padding: 14px 30px;
+    }
+}
